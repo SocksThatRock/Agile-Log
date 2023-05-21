@@ -32,7 +32,6 @@
                             "type": "FactSet",
                             "facts": @{outputs('Composes_and_sorts_the_list_of_events')}
                         }
-                    ]
                 },
                 {
                     "type": "Column",
@@ -47,7 +46,6 @@
                             "type": "FactSet",
                             "facts": @{outputs('Compose_and_sort_tasks')}
                         }
-                    ]
                 }
             ]
         },
