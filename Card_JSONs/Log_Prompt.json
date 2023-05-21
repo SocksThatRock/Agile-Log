@@ -1,0 +1,401 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "msteams": {
+        "width": "Full"
+    },
+    "body": [
+        {
+            "type": "Container",
+            "style": "default",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Agile Log(ic)",
+                    "wrap": true,
+                    "fontType": "Monospace",
+                    "size": "ExtraLarge",
+                    "weight": "Bolder",
+                    "color": "Attention",
+                    "isSubtle": false,
+                    "horizontalAlignment": "Center",
+                    "id": "titlelogo"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "⏳ How have you spent your day?",
+                    "wrap": true,
+                    "horizontalAlignment": "Center",
+                    "fontType": "Default",
+                    "size": "Large",
+                    "color": "Attention",
+                    "weight": "Bolder",
+                    "id": "firstQ"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "🔎 Evaluate your day",
+                    "wrap": true,
+                    "horizontalAlignment": "Center",
+                    "isVisible": false,
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "color": "Attention",
+                    "id": "evaluate"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "🚫 What is the reason for your day off?",
+                    "wrap": true,
+                    "horizontalAlignment": "Center",
+                    "size": "Large",
+                    "color": "Attention",
+                    "weight": "Bolder",
+                    "isVisible": false,
+                    "id": "dayoff_question"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": 50,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "https://YOUR_DOMAIN-my.sharepoint.com/personal/YOUR_USER/Documents/AdaptiveCardButtons/Warning/LightTheme/warning_light_button_working.png",
+                                    "width": "150px",
+                                    "horizontalAlignment": "Center",
+                                    "id": "button_work",
+                                    "selectAction": {
+                                        "type": "Action.ToggleVisibility",
+                                        "targetElements": [
+                                            {
+                                                "elementId": "firstQ",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "evaluate",
+                                                "isVisible": true
+                                            },
+                                            {
+                                                "elementId": "dayoff_question",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_forkbuttons",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_choice",
+                                                "isVisible": true
+                                            },
+                                            {
+                                                "elementId": "container_text",
+                                                "isVisible": true
+                                            },
+                                            {
+                                                "elementId": "container_dayoff_toggle",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_navbuttons",
+                                                "isVisible": true
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 50,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "https://YOUR_DOMAIN-my.sharepoint.com/personal/YOUR_USER/Documents/AdaptiveCardButtons/Warning/LightTheme/warning_light_button_dayoff.png",
+                                    "width": "150px",
+                                    "height": "0px",
+                                    "horizontalAlignment": "Center",
+                                    "id": "button_dayoff",
+                                    "selectAction": {
+                                        "type": "Action.ToggleVisibility",
+                                        "targetElements": [
+                                            {
+                                                "elementId": "firstQ",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "evaluate",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "dayoff_question",
+                                                "isVisible": true
+                                            },
+                                            {
+                                                "elementId": "container_forkbuttons",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_choice",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_text",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_dayoff_toggle",
+                                                "isVisible": true
+                                            },
+                                            {
+                                                "elementId": "container_navbuttons",
+                                                "isVisible": true
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "columnset_forkbuttons",
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "id": "container_forkbuttons",
+            "horizontalAlignment": "Center",
+            "separator": true
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": 50,
+                            "items": [
+                                {
+                                    "type": "Input.ChoiceSet",
+                                    "placeholder": "Task",
+                                    "label": "✅ Which task have you worked on?",
+                                    "id": "choice_task",
+                                    "choices":@{outputs('Compose')
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 50,
+                            "items": [
+                                {
+                                    "type": "Input.ChoiceSet",
+                                    "choices": [
+                                        {
+                                            "title": "⭐",
+                                            "value": "⭐"
+                                        },
+                                        {
+                                            "title": "⭐⭐",
+                                            "value": "⭐⭐"
+                                        },
+                                        {
+                                            "title": "⭐⭐⭐",
+                                            "value": "⭐⭐⭐"
+                                        },
+                                        {
+                                            "title": "⭐⭐⭐⭐",
+                                            "value": "⭐⭐⭐⭐"
+                                        },
+                                        {
+                                            "title": "⭐⭐⭐⭐⭐",
+                                            "value": "⭐⭐⭐⭐⭐"
+                                        }
+                                    ],
+                                    "placeholder": "⭐⭐⭐",
+                                    "label": "📊 Grade todays progress",
+                                    "id": "choice_grade"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "columnset_choice",
+                    "separator": true
+                }
+            ],
+            "horizontalAlignment": "Left",
+            "spacing": "Medium",
+            "separator": true,
+            "id": "container_choice",
+            "isVisible": false
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": 50,
+                            "items": [
+                                {
+                                    "type": "Input.Text",
+                                    "placeholder": "Shortly describe the work you have done today",
+                                    "label": "📑 Record your progress ",
+                                    "id": "text_progress",
+                                    "isMultiline": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 50,
+                            "items": [
+                                {
+                                    "type": "Input.Text",
+                                    "placeholder": "Write down your ideas, insights or concerns",
+                                    "label": "🤔 Record your thoughts ",
+                                    "maxLength": 0,
+                                    "isMultiline": true,
+                                    "id": "text_mind"
+                                }
+                            ]
+                        }
+                    ],
+                    "horizontalAlignment": "Left",
+                    "id": "columnset_text"
+                }
+            ],
+            "id": "container_text",
+            "isVisible": false,
+            "separator": true
+        },
+        {
+            "type": "Container",
+            "verticalContentAlignment": "Center",
+            "id": "container_dayoff_toggle",
+            "isVisible": false,
+            "separator": true,
+            "items": [
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "🤒 Sick",
+                            "value": "Sick"
+                        },
+                        {
+                            "title": "🎮 Rest & Recreation",
+                            "value": "RnR"
+                        },
+                        {
+                            "title": "🛫 Travel",
+                            "value": "Travel"
+                        }
+                    ],
+                    "placeholder": "Reason for day off?",
+                    "id": "day_off"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "separator": true,
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": 50,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "https://YOUR_DOMAIN-my.sharepoint.com/personal/YOUR_USER/Documents/AdaptiveCardButtons/Warning/LightTheme/warning_light_button_back.png",
+                                    "height": "60px",
+                                    "horizontalAlignment": "Center",
+                                    "id": "button_back",
+                                    "selectAction": {
+                                        "type": "Action.ToggleVisibility",
+                                        "targetElements": [
+                                            {
+                                                "elementId": "firstQ",
+                                                "isVisible": true
+                                            },
+                                            {
+                                                "elementId": "evaluate",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "dayoff_question",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_forkbuttons",
+                                                "isVisible": true
+                                            },
+                                            {
+                                                "elementId": "container_choice",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_text",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_dayoff_toggle",
+                                                "isVisible": false
+                                            },
+                                            {
+                                                "elementId": "container_navbuttons",
+                                                "isVisible": false
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 50,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "https://YOUR_DOMAIN-my.sharepoint.com/personal/YOUR_USER/Documents/AdaptiveCardButtons/Warning/LightTheme/warning_light_button_submit.png",
+                                    "height": "60px",
+                                    "id": "button_submit",
+                                    "selectAction": {
+                                        "type": "Action.Submit",
+                                        "associatedInputs": "auto",
+                                        "id": "logbook_submit_work"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "columnset_navbuttons",
+                    "separator": true,
+                    "spacing": "ExtraLarge"
+                }
+            ],
+            "id": "container_navbuttons",
+            "isVisible": false,
+            "spacing": "ExtraLarge"
+        }
+    ]
+}
