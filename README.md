@@ -19,7 +19,7 @@ A Power Automate flow that helps you remember to keep a logbook in your agile wo
 
 
 
-![Card update after log has been submitted](https://github.com/SocksThatRock/Agile-Log/assets/118437480/b1d6b652-482d-447d-841b-4007b0ab2ff3)
+![Card update after submit](https://github.com/SocksThatRock/Agile-Log/assets/118437480/7ee7bef0-7014-4739-901f-f101620aba87)
 
 
 
