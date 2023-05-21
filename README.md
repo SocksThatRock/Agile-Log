@@ -116,6 +116,7 @@ Fill out the fields in the list with the corresponding dynamic fields
 ![image](https://github.com/SocksThatRock/Agile-Log/assets/118437480/c5f31057-d78a-4689-ad7e-9a605093c7a7)
 
 Same as the prior step, replace "My Site" with the correct URL and the Quote list should become avaliable in the dropdown.
+
 ![image](https://github.com/SocksThatRock/Agile-Log/assets/118437480/247d54f4-af9a-4067-aefa-e74945983885)
 
 Remove "Calendar" and replace it with the calendar of your choice from the dropdown
