@@ -1,13 +1,28 @@
 # Agile-Log
-A Power Automate flow that helps you remember to keep a logbook in your agile work environment
-![image](https://github.com/SocksThatRock/Agile-Log/assets/118437480/8badf7be-8680-4e51-ad5c-83a56806945c)
-![image](https://github.com/SocksThatRock/Agile-Log/assets/118437480/751d8095-ebc6-4cf5-a014-5f66ace316f7)
-Dark Mode - Text Color: Warning
+
+## Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+
+## Description
+
+A Power Automate flow that helps you remember to keep a logbook in your agile work environment and gives you a quick relevant update after each day.
 
 
-![image](https://github.com/SocksThatRock/Agile-Log/assets/118437480/afe066e1-dbed-4929-a842-6814bd94cf4f)
-![image](https://github.com/SocksThatRock/Agile-Log/assets/118437480/fba43f16-f41f-43af-a203-92928dab4b11)
-Light Mode - Text Color: Attention
+![Initial Screen](https://github.com/SocksThatRock/Agile-Log/assets/118437480/09a2b654-f9c7-412b-8a35-83edd354c212)
+
+
+
+![Log Input](https://github.com/SocksThatRock/Agile-Log/assets/118437480/c2e40aad-4a1b-44b4-a93b-ae66abfad0e9)
+
+
+
+![Card update after log has been submitted](https://github.com/SocksThatRock/Agile-Log/assets/118437480/b1d6b652-482d-447d-841b-4007b0ab2ff3)
+
+
+
+![Elements explained](https://github.com/SocksThatRock/Agile-Log/assets/118437480/f4105781-51d0-460f-8167-b77c87f07145)
 
 
 
@@ -15,7 +30,12 @@ Light Mode - Text Color: Attention
 
 
 
-# Requirements
+
+## Installation
+
+
+
+### Requirements
 
 A list to store the log (CSV for import provided in Assets)
 When importing the list use the following column types:
@@ -33,4 +53,4 @@ Originator = Title
 Quote = Multiple lines of text
 Wikilink = Hyperlink
 
-Your current backlog in [Planner](https://tasks.office.com/)
+Your current backlog items in [Planner](https://tasks.office.com/)
