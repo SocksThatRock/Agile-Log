@@ -34,7 +34,7 @@ A Power Automate flow that helps you remember to keep a logbook in your agile wo
 ## Features
 
 
-The flow will help you remember to record your logbbok every day
+The flow will help you remember to record your Logbbook every day
 
 It will keep you informed about the upcoming day's schedule
 
