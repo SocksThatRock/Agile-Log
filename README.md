@@ -84,7 +84,7 @@ When you have created these lists, go into settings and copy the URL up to the "
 
 ## Installation
 
-When all requirements have been met, import Agile_Logbook_Pt1 to Power Automate. 
+When all requirements have been met, import [Agile_Logbook_Pt1](Power_Automate_Flows/Agile_Logbook_Part1.zip) to Power Automate. 
 
 You can adjust when you want to be reminded about the logbook and during which days in the first step of the flow
 ![image](https://github.com/SocksThatRock/Agile-Log/assets/118437480/4c571504-1881-487c-9f8b-24a967e57a3d)
@@ -101,6 +101,10 @@ When you are happy with the changes, copy the JSON from the designer into the Ad
 Show advanced settings and make sure the Card Type ID is "Logbook"
 ![image](https://github.com/SocksThatRock/Agile-Log/assets/118437480/6c6e3c12-3bc3-4ec3-97f6-ee899e6e5568)
 
+Save the flow.
+
+
+Import [Agile_Logbook_Part2](Power_Automate_Flows/Agile_Logbook_Part2.zip) into Power Automate.
 
 
 Replace "My Site" with the URL you copied in step 2 of requirements and then you will be able to choose the Logbook list from the dropdown menu.
