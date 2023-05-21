@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Requirements](#requirements)
 - [Installation](#installation)
 
 ## Description
@@ -29,28 +30,31 @@ A Power Automate flow that helps you remember to keep a logbook in your agile wo
 
 
 
+## Requirements
+
+1. A [list](Lists/Logbook.csv) in [Microsoft Lists](https://www.microsoft.com/en-us/microsoft-365/microsoft-lists) to store the log.
++ When importing the list use the following column types:
+  - Date = Date and time
+  - Task = Choice
+  - Progress = Multiple lines of text
+  - Thoughts = Multiple lines of text
+  - Rating = Choice
+  - Day Off = Choice
+  - Title = Title
+
+2. A [list](Lists/InspirationalQuotes.csv) in [Microsoft Lists](https://www.microsoft.com/en-us/microsoft-365/microsoft-lists) to retrieve the quotes 
++ When importing the list use the following column types:
+  - Originator = Title
+  - Quote = Multiple lines of text
+  - Wikilink = Hyperlink
+
+3. Your current backlog items in [Planner](https://tasks.office.com/)
+
+4. The [images representing buttons](AdaptiveCard_Buttons) stored in your personal OneDrive
+
+
 
 
 ## Installation
 
 
-
-### Requirements
-
-A list to store the log (CSV for import provided in Assets)
-When importing the list use the following column types:
-Date = Date and time
-Task = Choice
-Progress = Multiple lines of text
-Thoughts = Multiple lines of text
-Rating = Choice
-Day Off = Choice
-Title = Title
-
-A list to retrieve the quotes (CSV for import provided in Assets)
-When importing the list use the following column types:
-Originator = Title
-Quote = Multiple lines of text
-Wikilink = Hyperlink
-
-Your current backlog items in [Planner](https://tasks.office.com/)
